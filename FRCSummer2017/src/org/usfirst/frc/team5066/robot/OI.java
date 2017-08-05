@@ -19,9 +19,9 @@ public class OI {
 	// number it is.
 	Joystick xboxController = new Joystick(0);
 	
-	Button abutton = new JoystickButton(xboxController, 1);
+	Button aButton = new JoystickButton(xboxController, 1);
 	Button bButton = new JoystickButton(xboxController, 2);
-	Button xbutton = new JoystickButton(xboxController, 3);
+	Button xButton = new JoystickButton(xboxController, 3);
 	Button yButton = new JoystickButton(xboxController, 4);
 	Button lb = new JoystickButton(xboxController, 5);
 	Button rb = new JoystickButton(xboxController, 6);
@@ -51,6 +51,9 @@ public class OI {
 	}
 	public double getTriggerLeft() {
 		return xboxController.getRawAxis(2);
+	}
+	
+	public OI(){
 	}
 
 	

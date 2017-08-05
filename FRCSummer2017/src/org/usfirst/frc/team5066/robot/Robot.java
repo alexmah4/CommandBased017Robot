@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team5066.robot.commands.CommandBase;
 import org.usfirst.frc.team5066.robot.commands.ExampleCommand;
+import org.usfirst.frc.team5066.robot.commands.XboxTankDrive;
 import org.usfirst.frc.team5066.robot.subsystems.Chassis;
 
 /**
@@ -37,7 +38,7 @@ public class Robot extends IterativeRobot {
 		CommandBase.init();
 		
 		//Add autonomous command to sendable chooser
-		chooser.addDefault("Default Auto(Does nothing)", new ExampleCommand());
+		chooser.addDefault("Default Auto(teleop)", new XboxTankDrive());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}

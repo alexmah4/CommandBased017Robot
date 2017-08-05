@@ -21,13 +21,14 @@ public class RobotMap {
 	 public static SpeedController driveRearRightMotor = new CANTalon(10);
 	 
 	 //climber
-	 public static SpeedController climberMotor = new CANTalon(5);
+	 public static SpeedController climberMotorOne = new CANTalon(8);
+	 public static SpeedController climberMotorTwo = new CANTalon(12);
 	 
 	 //intake
-	 public static SpeedController intakeMotor = new CANTalon(9);
+	 public static SpeedController intakeMotor = new CANTalon(5);
 	 
 	 //low goal shooter
-	 public static SpeedController lowGoalShooter = new CANTalon(8);
+	 public static SpeedController lowGoalShooter = new CANTalon(9);
 	 
 
 	// If you are using multiple modules, make sure to define both the port

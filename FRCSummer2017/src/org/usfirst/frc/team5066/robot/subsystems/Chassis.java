@@ -20,12 +20,12 @@ public class Chassis extends Subsystem{
 	double normalSpeedConstant = DEFAULT_NORMAL_SPEED_CONSTANT;
 	double fastSpeedConstant = DEFAULT_FAST_SPEED_CONSTANT;
 	
-	SpeedController frontLeftMotor = RobotMap.driveFrontLeftMotor;
-	SpeedController middleLeftMotor = RobotMap.driveMiddleLeftMotor;
-	SpeedController rearLeftMotor = RobotMap.driveRearLeftMotor;
-	SpeedController frontRightMotor = RobotMap.driveFrontRightMotor;
-	SpeedController middleRightMotor = RobotMap.driveMiddleRightMotor;
-	SpeedController rearRightMotor = RobotMap.driveRearRightMotor;
+	CANTalon frontLeftMotor = (CANTalon) RobotMap.driveFrontLeftMotor;
+	CANTalon middleLeftMotor = (CANTalon) RobotMap.driveMiddleLeftMotor;
+	CANTalon rearLeftMotor = (CANTalon) RobotMap.driveRearLeftMotor;
+	CANTalon frontRightMotor = (CANTalon) RobotMap.driveFrontRightMotor;
+	CANTalon middleRightMotor = (CANTalon) RobotMap.driveMiddleRightMotor;
+	CANTalon rearRightMotor = (CANTalon) RobotMap.driveRearRightMotor;
 
 		
 	@Override
