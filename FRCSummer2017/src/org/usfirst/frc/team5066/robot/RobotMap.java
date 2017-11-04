@@ -1,9 +1,5 @@
 package org.usfirst.frc.team5066.robot;
 
-import com.ctre.CANTalon;
-
-import edu.wpi.first.wpilibj.SpeedController;
-
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -13,22 +9,22 @@ import edu.wpi.first.wpilibj.SpeedController;
 public class RobotMap {
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
-	 public static SpeedController driveFrontLeftMotor = new CANTalon(6);
-	 public static SpeedController driveMiddleLeftMotor = new CANTalon(3);
-	 public static SpeedController driveRearLeftMotor = new CANTalon(2);
-	 public static SpeedController driveFrontRightMotor = new CANTalon(4);
-	 public static SpeedController driveMiddleRightMotor = new CANTalon(7);
-	 public static SpeedController driveRearRightMotor = new CANTalon(10);
+	 public static int driveFrontLeftMotor = 6;
+	 public static int driveMiddleLeftMotor = 3;
+	 public static int driveRearLeftMotor = 2;
+	 public static int driveFrontRightMotor = 4;
+	 public static int driveMiddleRightMotor = 7;
+	 public static int driveRearRightMotor = 10;
 	 
 	 //climber
-	 public static SpeedController climberMotorOne = new CANTalon(8);
-	 public static SpeedController climberMotorTwo = new CANTalon(12);
+	 public static int climberMotorOne = 8;
+	 public static int climberMotorTwo = 12;
 	 
 	 //intake
-	 public static SpeedController intakeMotor = new CANTalon(5);
+	 public static int intakeMotor = 5;
 	 
 	 //low goal shooter
-	 public static SpeedController lowGoalShooter = new CANTalon(9);
+	 public static int lowGoalShooter = 9;
 	 
 
 	// If you are using multiple modules, make sure to define both the port

@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-import org.usfirst.frc.team5066.robot.commands.CommandBase;
 import org.usfirst.frc.team5066.robot.commands.ExampleCommand;
 import org.usfirst.frc.team5066.robot.commands.XboxTankDrive;
 import org.usfirst.frc.team5066.robot.subsystems.Chassis;
@@ -22,7 +21,8 @@ import org.usfirst.frc.team5066.robot.subsystems.Chassis;
  */
 public class Robot extends IterativeRobot {
 
-	public static final Chassis Chassis = new Chassis();
+	//public static final ExmapleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final Chassis chassis = new Chassis();
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -34,11 +34,13 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-		//initialize all subsystems
-		CommandBase.init();
+		//initialize Cameras/OI/other peripherals
+		//USBCamera fCamera = CameraServer.getInstance().startAutomaticCapture(RobotMap.frontCameraPort)
+		oi = new OI();
+
 		
 		//Add autonomous command to sendable chooser
-		chooser.addDefault("Default Auto(teleop)", new XboxTankDrive());
+		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
